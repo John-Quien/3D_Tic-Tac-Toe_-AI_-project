@@ -54,11 +54,30 @@ def game(player):
            
 
 def gameWin(gameCube):
+    gameCube1D = np.array([gameCube[0, 0, 0], gameCube[0, 0, 1], gameCube[0, 0, 2], gameCube[0, 0, 3],
+                             gameCube[0, 1, 0], gameCube[0, 1, 1], gameCube[0, 1, 2], gameCube[0, 1, 3],
+                             gameCube[0, 2, 0], gameCube[0, 2, 1], gameCube[0, 2, 2], gameCube[0, 2, 3],
+                             gameCube[0, 3, 0], gameCube[0, 3, 1], gameCube[0, 3, 2], gameCube[0, 3, 3],
 
+                             gameCube[1, 0, 0], gameCube[1, 0, 1], gameCube[1, 0, 2], gameCube[1, 0, 3],
+                             gameCube[1, 1, 0], gameCube[1, 1, 1], gameCube[1, 1, 2], gameCube[1, 1, 3],
+                             gameCube[1, 2, 0], gameCube[1, 2, 1], gameCube[1, 2, 2], gameCube[1, 2, 3],
+                             gameCube[1, 3, 0], gameCube[1, 3, 1], gameCube[1, 3, 2], gameCube[1, 3, 3],
 
+                             gameCube[2, 0, 0], gameCube[2, 0, 1], gameCube[2, 0, 2], gameCube[2, 0, 3],
+                             gameCube[2, 1, 0], gameCube[2, 1, 1], gameCube[2, 1, 2], gameCube[2, 1, 3],
+                             gameCube[2, 2, 0], gameCube[2, 2, 1], gameCube[2, 2, 2], gameCube[2, 2, 3],
+                             gameCube[2, 3, 0], gameCube[2, 3, 1], gameCube[2, 3, 2], gameCube[2, 3, 3],
 
-
-
+                             gameCube[3, 0, 0], gameCube[3, 0, 1], gameCube[3, 0, 2], gameCube[3, 0, 3],
+                             gameCube[3, 1, 0], gameCube[3, 1, 1], gameCube[3, 1, 2], gameCube[3, 1, 3],
+                             gameCube[3, 2, 0], gameCube[3, 2, 1], gameCube[3, 2, 2], gameCube[3, 2, 3],
+                             gameCube[3, 3, 0], gameCube[3, 3, 1], gameCube[3, 3, 2],
+                             gameCube[3, 3, 3]])
+    for i in range(0,3):
+        win = gameCube[0+(i*4)]+gameCube[1+(i*4)]+gameCube[2+(i*4)]+gameCube[3+(i*4)]
+        if win == 4 or win == -4
+            return True
 
 
 def exitGame():
