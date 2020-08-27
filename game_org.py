@@ -30,13 +30,28 @@ def gameStart():
 
 def game(player):
     gameCube = np.zeros((4, 4, 4))
-    while (gameWin() or gameEnd()) != True:
-        #stuff
+    gameEnd = 0
+    while gameWin() != True or gameEnd == 64:
+        playerTurn = False
+        if player = 1:
+            print("Player 1: Enter the number in brackets to select cube position")
+        if player = -1:
+            print("Player 2: Enter the number in brackets to select cube position")
+        while playerTurn == False:
+            layer = eval(input("Layer select : Front Layer (0), Front Middle Layer (1), Back Middle Layer (2), Back Layer (3)"))
+            row = eval(input("Row select : Top Row (0), Top Middle Row (1), Bottom Middle Row (2), Bottom Row (3)"))
+            cube = eval(input("Cube select: Left (0), Middle Left (1), Middle Right (2), Right (3)"))
+            if gameCube[layer,row,cube] == 0:
+                gameCube[layer,row,cube] = player
+                playerTurn == True
+                gameEnd += 1
+                player = -player
+                print("Successful Placement: Current Gameboard", gameCube)
+            else:
+                print("There is already a placement there! Please choose another spot on the gameboard.")
+                playerTurn == False
 
-gameWin()
-
-def gameEnd():
-
+def gameWin():
 
 
 
