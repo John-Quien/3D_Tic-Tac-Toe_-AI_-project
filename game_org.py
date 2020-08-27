@@ -51,7 +51,7 @@ def game(player):
                 winCondition = gameWin(gameCube)
             else:
                 print("There is already a placement there! Please choose another spot on the gameboard.")
-                playerTurn == False
+           
 
 def gameWin(gameCube):
 
