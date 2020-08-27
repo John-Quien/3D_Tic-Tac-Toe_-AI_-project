@@ -78,10 +78,14 @@ def gameWin(gameCube):
         win = gameCube1D[0+(i*4)]+gameCube1D[1+(i*4)]+gameCube1D[2+(i*4)]+gameCube1D[3+(i*4)] #horizontal layer wins
         if win == 4 or win == -4
             return True
-    for i in range(0,4):
+    for i in range(0,4): #
         for j in range(0,4):
             win1 = gameCube1D[0+j+(i*16)]+gameCube1D[4+j+(i*16)]+gameCube1D[8+j+(i*16)]+gameCube1D[12+j+(i*16)]
-
+            win2 = gameCube1D[0+j+(i*4)]+gameCube1D[16+j+(i*4)]+gameCube1D[32+j+(i*4)]+gameCube1D[48+j+(i*4)]
+            if win1 == 4 or win1 == -4:
+                return True
+            if win2 == 4 or win2== -4:
+                return True
 
 def exitGame():
     print("Thanks for playing! We hope you come again ~ ")
