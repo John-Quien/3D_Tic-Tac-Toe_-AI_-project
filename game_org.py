@@ -78,7 +78,10 @@ def gameWin(gameCube):
         win = gameCube1D[0+(i*4)]+gameCube1D[1+(i*4)]+gameCube1D[2+(i*4)]+gameCube1D[3+(i*4)] #horizontal layer wins
         if win == 4 or win == -4
             return True
-        win = gameCube1D[0+(i*4)]+gameCube1D[17+(i*4)]+gameCube1D[34+j+(i*4)]+gameCube1D[51+(i*4)] #-slope horizontal depth wins
+        win = gameCube1D[0+(i*4)]+gameCube1D[17+(i*4)]+gameCube1D[34+(i*4)]+gameCube1D[51+(i*4)] #-slope horizontal depth wins
+        if win == 4 or win == -4
+            return True
+        win = gameCube1D[48+(i*4)]+gameCube1D[33+(i*4)]+gameCube1D[18+(i*4)]+gameCube1D[3+(i*4)] #+slope horizontal depth wins
         if win == 4 or win == -4
             return True
     for i in range(0,4): #
