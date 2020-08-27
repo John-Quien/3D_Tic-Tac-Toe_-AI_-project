@@ -33,9 +33,9 @@ def game(player):
     gameEnd = 0
     while gameWin() != True or gameEnd == 64:
         playerTurn = False
-        if player = 1:
+        if player == 1:
             print("Player 1: Enter the number in brackets to select cube position")
-        if player = -1:
+        if player == -1:
             print("Player 2: Enter the number in brackets to select cube position")
         while playerTurn == False:
             layer = eval(input("Layer select : Front Layer (0), Front Middle Layer (1), Back Middle Layer (2), Back Layer (3)"))
