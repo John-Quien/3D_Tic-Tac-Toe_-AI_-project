@@ -31,7 +31,8 @@ def gameStart():
 def game(player):
     gameCube = np.zeros((4, 4, 4))
     gameEnd = 0
-    while gameWin() != True or gameEnd == 64:
+    winCondition = False
+    while winCondition != True or gameEnd == 64:
         playerTurn = False
         if player == 1:
             print("Player 1: Enter the number in brackets to select cube position")
@@ -47,11 +48,16 @@ def game(player):
                 gameEnd += 1
                 player = -player
                 print("Successful Placement: Current Gameboard", gameCube)
+                winCondition = gameWin(gameCube)
             else:
                 print("There is already a placement there! Please choose another spot on the gameboard.")
                 playerTurn == False
 
-def gameWin():
+def gameWin(gameCube):
+
+
+
+
 
 
 
