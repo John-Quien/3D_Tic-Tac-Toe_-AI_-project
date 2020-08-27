@@ -104,6 +104,19 @@ def gameWin(gameCube):
             win = gameCube1D[0+j+(i*4)]+gameCube1D[16+j+(i*4)]+gameCube1D[32+j+(i*4)]+gameCube1D[48+j+(i*4)] #depth wins
             if win == 4 or win == -4:
                 return True
+    #Hardcoded crisscross diagonals
+    win = gameCube1D[0]+gameCube1D[21]+gameCube1D[42]+gameCube1D[63]
+    if win == 4 or win == -4:
+        return True
+    win = gameCube1D[3]+gameCube1D[22]+gameCube1D[41]+gameCube1D[60]
+    if win == 4 or win == -4:
+        return True
+    win = gameCube1D[51]+gameCube1D[38]+gameCube1D[25]+gameCube1D[12]
+    if win == 4 or win == -4:
+        return True
+    win = gameCube1D[48]+gameCube1D[37]+gameCube1D[26]+gameCube1D[15]
+    if win == 4 or win == -4:
+        return True
 
 def exitGame():
     print("Thanks for playing! We hope you come again ~ ")
