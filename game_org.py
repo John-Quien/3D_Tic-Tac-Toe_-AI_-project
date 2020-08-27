@@ -75,7 +75,7 @@ def gameWin(gameCube):
                              gameCube[3, 3, 0], gameCube[3, 3, 1], gameCube[3, 3, 2],
                              gameCube[3, 3, 3]])
     for i in range(0,3):
-        win = gameCube[0+(i*4)]+gameCube[1+(i*4)]+gameCube[2+(i*4)]+gameCube[3+(i*4)]
+        win = gameCube1D[0+(i*4)]+gameCube1D[1+(i*4)]+gameCube1D[2+(i*4)]+gameCube1D[3+(i*4)]
         if win == 4 or win == -4
             return True
 
